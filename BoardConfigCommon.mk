@@ -23,3 +23,7 @@ include $(PLATFORM_PATH)/board/*.mk
 
 BOARD_SEPOLICY_DIRS += \
     $(PLATFORM_PATH)/sepolicy
+
+#Specific Audio
+USE_CUSTOM_AUDIO_POLICY := 0
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
