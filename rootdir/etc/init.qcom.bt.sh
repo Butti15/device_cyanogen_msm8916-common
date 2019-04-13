@@ -89,3 +89,6 @@ esac
 setprop bluetooth.status on
 
 exit 0
+
+#Fix BT Address Thanks to Samsung
+setprop persist.service.bdroid.bdaddr `cat /efs/bluetooth/bt_addr`
