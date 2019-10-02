@@ -96,7 +96,7 @@ BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8916
+TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8916
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
 
 # Kernel
@@ -142,10 +142,10 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cm
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
-# SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += \
-    $(PLATFORM_PATH)/sepolicy
+# SELinux Ignore Sepolicy for now
+#include device/qcom/sepolicy-legacy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += \
+#    $(PLATFORM_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
